@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block header %}
+<link href="/static/style.css" rel="stylesheet">
+<link href="/static/table.css" rel="stylesheet">
+{% endblock %}
+{% block content %}
+    <div id="page-wrapper" style="margin-left:auto;margin-right:auto;width: auto">
+        <div class="portlet box blue">
+            <div class="portlet-title">
+                <div class="caption"><i class="icon-comments"></i>
+                    <h4>数据生成系统</h4>
+                </div>
+                <div class="tools">
+                <a class="collapse" href="javascript:;"></a>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <form action="" method="post">
+                <!-- /.panel-heading -->
+                <div class="panel-body" style="text-align:center;margin:0 ">
+                    <div class="dataTable_wrapper" >
+                            <div class="form-group" style="float: left; width: 500px;">
+                                <label>统计目标</label>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"
+                                               checked>Radio 1
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Radio
+                                        2
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">Radio
+                                        3
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group" style="float: left; width: 500px;">
+                                <label>表头字段</label>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value="">Checkbox 1
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value="">Checkbox 2
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value="">Checkbox 3
+                                    </label>
+                                </div>
+                            </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-default">生成数据</button>
+                        </div>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function del() {
+            if (!confirm('确认删除任务？')) {
+                window.event.returnValue = false;
+            }
+        }
+    </script>
+{% endblock %}
